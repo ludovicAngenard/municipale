@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {signal} from '@angular/core';
+import { Component, computed, signal } from "@angular/core"
+
 @Component({
   standalone: true,
   selector: 'app-entete',
@@ -8,5 +8,5 @@ import {signal} from '@angular/core';
 })
 export class EnteteComponent {
   public test = 'azy'
-  public testsign = signal(0)
+  public testsign = 0
 }
