@@ -1,0 +1,34 @@
+
+<section>
+    <h2>
+        <!-- <button
+          (click)="toggleDisplayedContent()"
+          type="button"
+          class="accordeon"
+          aria-expanded="false"
+          aria-controls="accordion-1"
+          [aria-label]="isDisplayed() ? 'Fermer': 'Ouvrir'">
+        </button> -->
+        {{theme().titre}}
+        <!-- <i aria-hidden="true" class="fa-solid" [class]="isDisplayed() ? 'fa-x':'fa-chevron-right'"></i> -->
+    </h2>
+    <p>{{ isDisplayed() ?  theme().description : (theme().description.substring(0,400) + ' ...')}}</p>
+
+    <ul class="accordeon-content" [class]="isDisplayed() ? 'show':''">
+        @for(mesure of theme().mesures; track mesure){
+            <li >
+                {{mesure}}
+            </li>
+        }
+    </ul>
+    <a
+        class="bouton"
+        (click)="toggleDisplayedContent()"
+    >
+        {{ isDisplayed() ? 'Réduire' : 'En savoir' }}
+        @if(!isDisplayed()){
+            <i aria-hidden="true" class="fa-solid fa-plus"></i>
+        }
+    </a>
+</section>
+

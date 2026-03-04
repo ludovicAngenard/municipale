@@ -1,0 +1,15 @@
+<nav class="topnav" id="myTopnav" [class]="menuDisplayedClass()">
+  <a class="logo" href="#" title="Retour en haut de page">
+      <img src="/assets/images/logo.png" alt="">
+  </a>
+  <a routerLink="/programme">Le programme</a>
+  <a  href='/#section-formulaire'>
+    Nous rejoindre
+  </a>
+  <a href="https://actionpopulaire.fr/">Action populaire</a>
+  <a href="https://www.service-public.fr/particuliers/vosdroits/R16396" target="_blank" >M'inscrire sur la liste électorale</a>
+  <a href="javascript:void(0);"
+    [title]="isMenuDisplayed() ? 'fermer menu':'ouvrir menu'" class="icon" (click)="onClickMobileMenu()">
+    <i class="fa fa-bars"></i>
+  </a>
+</nav>

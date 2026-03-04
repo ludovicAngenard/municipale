@@ -1,0 +1,21 @@
+:host{
+    a{
+        border-radius: 50%;
+        position: fixed;
+        bottom: 10;
+        right: 10;
+        width: 5rem;
+        height: 5rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--noir);
+        color: var(--blanc);
+        z-index: 2;
+    }
+    a:hover{
+        background-color: var(--jaune);
+        border: 1px solid var(--noir);
+    }
+}

@@ -1,0 +1,30 @@
+<a routerLink="/" class="btn-retour"><i class="fas fa-arrow-left"></i> Retour à l'accueil</a>
+<h1>Le programme</h1>
+<p class="subtitle">
+    Découvrez nos 90 mesures!
+</p>
+<section class="tracts">
+    <a
+        class="bouton"
+        [href]="'./assets/document/tract-santé.pdf'"
+        download
+    >
+        Pour l'accès à la santé pour tous ! (Télécharger pdf 24 Mo)
+        <i class="fa-solid fa-download"></i>
+    </a>
+    <a
+        class="bouton"
+        [href]="'./assets/document/tract-enfance.pdf'"
+        download
+    >
+        Pour une école publique réellement gratuite ! (Télécharger pdf 8 Mo)
+        <i class="fa-solid fa-download"></i>
+    </a>
+</section>
+<ol>
+    @for(theme of themes; track theme.titre){
+      <li>
+          <app-accordeon [theme]="theme"></app-accordeon>
+      </li>
+    }
+</ol>

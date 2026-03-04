@@ -1,0 +1,74 @@
+i{
+  margin-left: 4rem;
+  color: var(--noir);
+}
+section{
+  margin-top: 2rem;
+}
+h2 button.accordeon:hover{
+  text-decoration: underline;
+  i {
+      color: var(--violer);
+  }
+}
+.accordeon-content{
+  transition: opacity 1s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+  li::marker{
+    font-family: "Font Awesome 5 Free";
+    content:"\f178";
+    font-weight: 900;
+  }
+  li{
+    margin-top: 1rem;
+    padding-left: 1rem;
+  }
+}
+.accordeon-content.show{
+  opacity: 1;
+    height: auto;
+    margin-bottom: 4rem;
+}
+
+.bouton{
+    background-color: var(--violet);
+    border: none;
+    padding: 1rem;
+    border-radius: 50px;
+    border: 1px solid var(--violet);
+    color: var(--blanc);
+    font-weight: bold;
+    text-decoration: none;
+    min-width: 12rem;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    max-width: 1rem;
+    &:hover{
+        color: var(--violet);
+        background-color: var(--blanc);
+    }
+    i{
+      color: var(--blanc);
+    }
+}
+a{
+    font-size: 1rem;
+    margin: 0;
+
+}
+a:hover i{
+  color: var(--violet);
+}
+
+p {
+  margin-bottom: 4rem;
+}
+
+h1{
+  max-width: 90%;
+}

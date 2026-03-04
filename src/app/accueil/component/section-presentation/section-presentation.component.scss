@@ -1,0 +1,60 @@
+:host{
+    //background-color: rgba(67, 172, 89, 0.75);
+    background-image: linear-gradient(rgba(255, 199, 0, 0.75), rgba(255, 199, 0, 0.75)), url('/assets/images/participation.jpg');
+    background-attachment: fixed !important;
+    background-position: center center;
+    background-size:  cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 5rem;
+    img{
+        width: 100%;
+        border-radius: 1rem;
+    }
+    div{
+        z-index: 1;
+        background-color: var(--blanc);
+        padding: 2rem;
+        max-width: 50rem;
+        border-radius: 1rem;
+        text-align: center;
+        p{
+            color: var(--noir);
+            font-size: 1.15rem;
+            line-height: 1.8;
+            max-width: 35rem;
+            margin: 0 auto 25px auto;
+        }
+    }
+    @media screen and (max-width: 850px) {
+        padding: 1rem;
+
+        #section-idees{
+            padding: 1rem;
+            padding-bottom: 2rem;
+        }
+    }
+    a{
+        background-color: var(--violet);
+        border: none;
+        padding: 1rem;
+        border-radius: 50px;
+        border: 1px solid var(--violet);
+        color: var(--blanc);
+        font-weight: bold;
+        text-decoration: none;
+        min-width: 18rem;
+        text-align: center;
+        &:hover{
+            color: var(--violet);
+            background-color: var(--blanc);
+        }
+    }
+    .procuration{
+        margin-top: 2rem !important;
+    }
+}

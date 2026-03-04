@@ -1,0 +1,40 @@
+:host {
+    //background-color: rgba(67, 172, 89, 0.75);
+    background-image: linear-gradient(rgba(249, 22, 22, 0.75),rgba(249, 22, 22, 0.75)),url('/assets/images/accueil.jpg');
+
+    background-attachment: fixed;
+    background-position: center center;
+    background-size:  cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 5rem;
+    color: var(--noir) !important;
+    @media screen and (max-width: 850px) {
+        padding: 1rem;
+    }
+
+    .bouton{
+        background-color: var(--violet);
+        border: none;
+        padding: 1rem;
+        border-radius: 50px;
+        border: 1px solid var(--violet);
+        color: var(--blanc);
+        font-weight: bold;
+        text-decoration: none;
+        min-width: 18rem;
+        text-align: center;
+        &:hover{
+            color: var(--violet);
+            background-color: var(--blanc);
+        }
+    }
+}
+a{
+    font-size: 1rem;
+    margin: 0;
+}
