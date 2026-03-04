@@ -19,7 +19,7 @@ export class Pogramme {
         "Demander la reconnaissance d’Angers en zone tendue afin de permettre la mise en place de  l’encadrement des loyers",
         "Construire  massivement des logements, grâce aux bailleurs sociaux de la ville",
         "Développer un service d’accompagnement des particuliers pour la rénovation thermique de leur logement : montage de dossiers, recherche de subventions",
-        "Systématiser l’anonymisation des dossiers en commission d’attribution de logements",
+        "Systématiser l’anonymisation des dossiers en commissions d’attribution de logements",
         "Développer les outils de préventions contre les expulsions locatives (commission de prévention des impayés locatifs avec les bailleurs, permanence d’aide juridique, médiation)",
         "Lutter contre la déshabitation du parc résidentiel notamment en abaissant la limite de mise en location touristique de la résidence principale à 90 jours et en systématisant les contrôles des loueurs de meublés touristiques et des plateformes numériques",
         "Réserver du foncier et soutenir les projet de logements étudiants, à destination des jeunes actifs, de logements adaptés pour les séniors et d’habitats intergénérationnels",
