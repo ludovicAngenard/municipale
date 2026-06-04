@@ -1,0 +1,12 @@
+@use "../../../assets/styles/abstracts/variables" as v;
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+
+    @media screen and (max-width: v.$breakpoint-tablette) {
+        padding: 0rem;
+    }
+}

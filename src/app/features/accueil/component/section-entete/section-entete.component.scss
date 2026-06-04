@@ -1,0 +1,96 @@
+@use '../../../../../assets/styles/components/button.component.scss';
+@use '../../../../../assets/styles/components/page-header.scss';
+@use '../../../../../assets/styles/abstracts/variables' as v;
+
+:host{
+    .button-soutient{
+        background-color: #4C0297;
+    }
+    section{
+        .inner-container{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            position: absolute;
+            margin: 0 auto;
+            width: 60%;
+            max-width: 60rem;
+            min-height: 45rem;
+            top: 0;
+            right: 0;
+            left: 0;
+            background-color: transparent;
+            .container-une{
+                font-family: "Inter", Sans-serif;
+                font-size: 17px;
+                background-color: white;
+                color: #00232C;
+                width: 100%;
+                min-height: 20rem;
+                margin-bottom: 1rem;
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+    .une-soutien {
+        width: 70%;
+        padding: 2rem;
+        display: flex;
+        justify-content:space-between;
+        flex-direction: column;
+        gap: 2rem;
+        img{
+            width: 283px;
+        }
+        img ~ img{
+            display: none;
+        }
+    }
+    .une-image {
+        width: 30%;
+        img{
+            height: 100%;
+            width:100%;
+            object-position: 0px 0px;
+            object-fit: cover;
+        }
+    }
+    @media screen and (max-width: v.$breakpoint-tablette) {
+        .inner-container{
+            width: 90% !important;
+        }
+    }
+
+    @media screen and (max-width: v.$breakpoint-telephone) {
+        .inner-container{
+            width: 95% !important;
+            .container-une{
+                flex-direction: column !important;
+                .une-subscribe {
+                    width: 100% !important;
+                }
+                .une-image{
+                   display: none;
+                }
+                .une-soutien{
+                    width: 100%;
+                    padding-right: 0;
+                    padding-left: 0;
+                    p,a,img:first-child{
+                        margin-right: 2rem;
+                        margin-left: 2rem;
+                    }
+                    img ~ img{
+                        width: 100%;
+                        display: block !important;
+                    }
+                    img{
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+}

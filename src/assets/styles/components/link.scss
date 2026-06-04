@@ -1,0 +1,7 @@
+@use "../abstracts/variables" as v;
+
+.link{
+    text-decoration: none;
+    color: v.$font-color;
+    font-family: v.$font-text, sans-serif;
+}

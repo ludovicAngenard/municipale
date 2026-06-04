@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Public Sans Black";
+    src: url("../../fonts/Public_Sans/static/PublicSans-Black.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Public Sans Bold";
+    src: url("../../fonts/Public_Sans/static/PublicSans-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gowun Batang";
+    src: url("../../fonts/Gowun_Batang/GowunBatang-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+$dark-violet:#4C0297;
+$violet : #7b13d6;
+$rouge : #f91616;
+$rouge-degrade: #f2295b;
+$bleu : #3885f4;
+$rose : #ed5fb1;
+$jaune : #f9c900;
+$vert : #2e9959;
+$blanc: white;
+
+$background-action-populaire : #FFEC00;
+$background-facebook: rgb(59, 89, 152);
+$background-instagram: rgb(150, 41, 145);
+
+$font-size-subtitle: 30px;
+$font-size-title: 50px;
+$font-title: 'Public Sans Black';
+$font-subtitle: 'Public Sans Bold';
+$font-text: "Config Condensed";
+
+$primary-color: $violet;
+$font-color: #00232c;
+$background-action-populaire-hover: $font-color;
+
+$breakpoint-tablette:1200px;
+$breakpoint-telephone:700px;
+
+$width-content-container: 1000px;

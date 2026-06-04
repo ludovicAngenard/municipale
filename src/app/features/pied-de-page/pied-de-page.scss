@@ -1,0 +1,81 @@
+@use "../../../assets/styles/abstracts/mixins" as m;
+@use "../../../assets/styles/abstracts/variables" as v;
+@use "../../../assets/styles/components/text-link.scss";
+:host{
+    margin-top: 5rem;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.15);
+    h2{
+        color: v.$primary-color;
+        margin-bottom:0;
+    }
+    @include m.flex-row;
+    gap: 5rem;
+    .logo-mobile{
+        margin-top: 1rem;
+        display: none;
+    }
+    .logo-desktop{
+        margin-top: 1rem;
+        display: block
+    }
+    .rs,
+    .mentions{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        ul{
+            list-style-type: none;
+            padding: 0;
+        }
+    }
+    .rs {
+        ul{
+            @include m.flex-col;
+            gap:1rem;
+            width: 100%;
+        }
+        li{
+            width: 100%;
+            padding-left: 1rem;
+            padding-bottom: 0.4rem;
+            padding-top: 0.4rem;
+            gap: 1rem;
+            border-radius: 3rem;
+            display: flex;
+            align-items: center;
+        }
+        i{
+            font-size: 1.5rem;
+        }
+        i,a{
+            align-items: center;
+            color: white;
+        }
+    }
+    li:has(.fa-instagram){
+        background-color: v.$background-instagram;
+        color: white;
+    }
+    li:has(.fa-facebook){
+        background-color: v.$background-facebook;
+        color: white;
+    }
+    li:has(.fa-x-twitter){
+        background-color: white;
+        border: 1px solid black;
+        i,a{color:v.$font-color}
+    }
+
+}
+@media screen and (max-width: v.$breakpoint-telephone) {
+    :host{
+        @include m.flex-col;
+        .logo-mobile{
+            display: block;
+            max-width: 95%;
+        }
+        .logo-desktop{
+            display: none;
+        }
+    };
+}

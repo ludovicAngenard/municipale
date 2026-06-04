@@ -1,0 +1,43 @@
+<app-entete-commune
+    title="Municipales 2026 - programme"
+    subtitle="Découvrez nos 90 mesures!"
+/>
+<ul class="tracts">
+    <li>
+        <a
+            class="button"
+            [href]="'assets/document/tract-santé.pdf'"
+            download
+        >
+            Pour l'accès à la santé pour tous (Télécharger pdf 24 Mo)
+            <i class="fa-solid fa-download"></i>
+        </a>
+    </li>
+    <li>
+        <a
+            class="button"
+            [href]="'assets/document/tract-santé.pdf'"
+            download
+        >
+            Notre programme et notre équipe (Télécharger pdf 14 Mo)
+            <i class="fa-solid fa-download"></i>
+        </a>
+    </li>
+    <li>
+        <a
+            class="button"
+            [href]="'assets/document/tract-enfance.pdf'"
+            download
+        >
+            Pour une école publique réellement gratuite (Télécharger pdf 8 Mo)
+            <i class="fa-solid fa-download"></i>
+        </a>
+    </li>
+</ul>
+<ol>
+    @for(theme of themes; track theme.titre){
+      <li>
+          <app-accordeon [theme]="theme"></app-accordeon>
+      </li>
+    }
+</ol>

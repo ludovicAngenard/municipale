@@ -1,0 +1,26 @@
+@use "../../../assets/styles/components/card.scss";
+@use "../../../assets/styles/abstracts/variables" as v;
+:host{
+    section{
+        width: 70%;
+        margin: auto;
+    }
+    ul{
+        display: flex;
+        justify-content: start;
+        gap: 2rem;
+        padding: 0;
+    }
+    h2{
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: v.$breakpoint-telephone) {
+    :host{
+        section{ width: 95%;}
+
+        ul{flex-direction: column;}
+    }
+}

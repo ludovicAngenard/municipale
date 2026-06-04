@@ -1,0 +1,36 @@
+@use "../../../assets/styles/abstracts/variables" as v;
+@use "../../../assets/styles/components/text-link.scss";
+@use "../../../assets/styles/components/card.scss";
+
+:host{
+    ul{padding: 0;}
+    li::marker{
+        content: none;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        width: v.$width-content-container;
+    }
+
+    #carte-ga-maine-et-loire{
+        min-height: 30rem;
+    }
+}
+@media screen and (max-width: 1200px) {
+    :host{
+        section{
+            width: 99%;
+        }
+    }
+}
+.container-groupes{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}

@@ -1,0 +1,122 @@
+@use "../../../assets/styles/abstracts/variables" as v;
+@use "../../../assets/styles/components/button-icon.scss";
+@use "../../../assets/styles/components/link.scss";
+@use "../../../assets/styles/components/nav-link.scss";
+@use "../../../assets/styles/components/link-action-populaire.scss";
+@use "../../../assets/styles/components/button-light.scss";
+
+:host{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap:2rem;
+  position: fixed;
+  padding-right: 1rem;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 95%;
+  border-bottom-right-radius: 2rem;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  background-color: v.$blanc;
+  color: v.$font-color;
+  img{
+    width: 10rem;
+  }
+  nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    div{
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-links{
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      li {
+        &::marker{
+          content: none;
+        }
+      }
+    }
+  }
+  .responsive-menu-button{
+    display: none;
+  }
+  .fa-grip{
+    font-size:2rem;
+  }
+  .fa-bars{
+    font-size: 1.5rem;
+    color: v.$font-color;
+  }
+  .reponsive-menu-open{
+    font-size: 1.5rem;
+    color: v.$font-color;
+  }
+
+  dialog{
+    width: 20rem;
+    border: none;
+    border-radius: 1rem;
+    font-family: v.$font-text, sans-serif;
+    button{
+      float: right;
+      border: none;
+      background-color: transparent;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    hr{
+      color: lightgrey;
+    }
+
+  }
+  dialog div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    img{
+      width: 5rem;
+      border-radius: 5rem;
+    }
+    a{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  @media screen and (max-width: v.$breakpoint-tablette){
+    .menu,
+    nav,
+    .nav-links{
+      flex-direction: column;
+    }
+    nav div {
+      width: 100%;
+      justify-content: space-between;
+    }
+    .responsive-menu-button{
+      display: block;
+    }
+    .nav-links{
+      margin-top: 2rem;
+      display: none !important;
+      a:last-child{
+        margin-bottom: 1rem;
+      }
+
+    }
+    div:has(.reponsive-menu-open) ~ .nav-links{
+      display: flex !important;
+      flex-direction: column;
+    }
+  }
+}

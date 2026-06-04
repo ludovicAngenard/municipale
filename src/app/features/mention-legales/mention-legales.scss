@@ -1,0 +1,14 @@
+@use "../../../assets/styles/abstracts/variables" as v;
+:host{
+    section{
+        margin: auto;
+        width: v.$width-content-container;
+    }
+}
+@media screen and (max-width: 1200px) {
+    :host{
+        section{
+            width: 99%;
+        }
+    }
+}

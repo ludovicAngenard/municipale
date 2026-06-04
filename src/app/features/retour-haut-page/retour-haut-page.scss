@@ -1,0 +1,24 @@
+@use "../../../assets/styles/abstracts/variables" as v;
+:host{
+    button{
+        border-radius: 50%;
+        position: fixed;
+        bottom: 10;
+        right: 10;
+        width: 5rem;
+        height: 5rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px v.$font-color solid ;
+        z-index: 2;
+        background-color: white;
+    }
+    button:hover,
+    button:focus{
+        border: none;
+        background-color: v.$primary-color;
+        color: white;
+    }
+}

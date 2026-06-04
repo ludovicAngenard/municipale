@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as v;
+
+.nav-link {
+  font-family: "Config Condensed", Sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1em;
+  letter-spacing: -0.4px;
+  word-spacing: 0em;
+  color: v.$font-color;
+  &:hover{
+    color: v.$primary-color;
+  }
+  &.active{
+    text-decoration: v.$font-color underline;
+    line-height: 0rem;
+    text-underline-offset: 0.3rem;
+    text-decoration-thickness: 0.15rem;
+  }
+}

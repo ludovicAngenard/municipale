@@ -1,0 +1,27 @@
+@use "../abstracts/variables" as v;
+.button{
+    cursor: pointer;
+    border: none;
+    background-color: v.$primary-color;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-wrap: nowrap;
+    i{
+        margin-left: 1rem;
+    }
+    &:focus,
+    &:hover{
+        text-decoration: none;
+        background-color: #D1271C;
+    }
+}
+
+@media screen and (max-width: v.$breakpoint-telephone) {
+    .button{
+        display: block !important;
+        text-wrap: wrap;
+        line-height: 2rem !important;
+    }
+}

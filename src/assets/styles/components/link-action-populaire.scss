@@ -1,0 +1,35 @@
+@use "../abstracts/variables" as v;
+
+.link-action-populaire {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 4px;
+    font-family: "Config Condensed", Sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: -0.4px;
+    word-spacing: 0em;
+    padding: 4px 8px 4px 4px;
+    border-radius: 5px;
+    font-family: "Poppins", Sans-serif;
+    text-wrap: wrap;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: v.$font-color;
+    background-color: v.$background-action-populaire;
+  &:hover{
+    color: v.$blanc;
+    background-color: v.$background-action-populaire-hover;
+  }
+  img{
+    height: auto;
+    width: 30px !important;
+  }
+}

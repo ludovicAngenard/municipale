@@ -1,0 +1,58 @@
+<app-entete-commune title="Département"/>
+<section>
+    <h2>Le fonctionnement</h2>
+    <p>Le mouvement de la France Insoumise est décomposé sur le territoire par département.
+        Chaque département a une boucle départementale qui rassemble l'ensemble des binômes paritaires des groupes d'action (GA) certifiés.
+        La boucle départementale doit élire des binômes pour les 5 pôles opérationnels ainsi qu'un correspondant départemental qui a pour charge de faire le lien entre le département et le national.
+        Vous pouvez consulter
+        <a
+            title="charte des boucles départementales | nouvelle fenêtre"
+            href="https://lafranceinsoumise.fr/charte-des-boucles-departementales/"
+            target="_blanck">
+            la charte des boucles départementales
+        </a>
+        pour plus de détail.
+    </p>
+    <h2> {{this.referentCaisseTitre}}</h2>
+    <ul>
+        @for( caisse of this.referentCaisse(); track caisse){
+            <li class="card">{{caisse.nom}}</li>
+        }
+    </ul>
+    <h2>{{this.referentLutteTitre}}</h2>
+    <ul>
+        @for(lutte of this.referentLutte(); track lutte ){
+            <li class="card">{{lutte.nom}}</li>
+        }
+    </ul>
+    <h2>{{this.referentRelationsTitre}}</h2>
+    <ul>
+        @for(relation of this.referentRelations(); track relation ){
+            <li class="card">{{relation.nom}}</li>
+        }
+    </ul>
+    <h2>{{this.referentMaterielTitre}}</h2>
+    <ul>
+        @for(materiel of this.referentMateriel(); track materiel ){
+            <li class="card">{{materiel.nom}}</li>
+        }
+    </ul>
+    <h2>{{this.referentReseauxTitre}}</h2>
+    <ul>
+        @for(reseau of this.referentReseaux(); track reseau ){
+            <li class="card">{{reseau.nom}}</li>
+        }
+    </ul>
+    <h2>{{this.correspondantTitre}}</h2>
+    <ul>
+        @for(correspondant of this.correspondant(); track correspondant ){
+            <li class="card">{{correspondant.nom}}</li>
+        }
+    </ul>
+    <h2>{{this.elueTitre}}</h2>
+    <ul>
+        @for(elue of this.elue(); track elue ){
+            <li class="card">{{elue.nom}}</li>
+        }
+    </ul>
+</section>

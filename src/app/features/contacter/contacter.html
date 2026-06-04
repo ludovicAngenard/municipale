@@ -1,0 +1,35 @@
+<app-entete-commune title="Nous contacter"/>
+<section>
+    <h2>
+        Les groupes d'actions sur Angers
+    </h2>
+    <iframe
+        id="carte-ga-maine-et-loire"
+        title="carte intéractive des groupes d'actions de la France insoumise"
+        src="https://actionpopulaire.fr/carte/groupes/?bounds={%22code_postal%22%3A%2249000%22}"
+    ></iframe>
+    <ul class="container-groupes">
+        @for (groupe of groupesAngers(); track groupe.nom) {
+            <li class="card">
+                <a
+                    [href]="groupe.lien"
+                    target="_blank"
+                    [aria-label]="groupe.nom + ' nouvelle fenêtre'"
+                    class="text-link"
+                >
+                    {{groupe.nom}}
+                </a>
+            </li>
+        }
+    </ul>
+    <h2>
+        Un message à passer ?
+    </h2>
+    <p>
+        Notre adresse mail : <a href="mailto:angers.populaire@gmail.com">angers.populaire@gmail.com</a>
+    </p>
+    <h2>
+        Envie de participer à la campagne ?
+    </h2>
+    <app-section-rejoindre/>
+</section>

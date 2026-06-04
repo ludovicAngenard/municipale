@@ -1,0 +1,61 @@
+@use "../../../assets/styles/abstracts/variables" as v;
+@use "../../../assets/styles/components/button.component.scss";
+@use "../../../assets/styles/components/accordeon.scss";
+img{
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.groupe-bureau{
+    display: block;
+}
+.groupe-tablette{
+    display: none;
+}
+.groupe-mobile{
+    display: none;
+}
+
+@media only screen and (max-width: v.$breakpoint-tablette){
+    .groupe-bureau{
+        display: none;
+    }
+    .groupe-tablette{
+        display: block;
+    }
+    .groupe-mobile{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: v.$breakpoint-telephone){
+    .groupe-bureau{
+        display: none;
+    }
+    .groupe-tablette{
+        display: none;
+    }
+    .groupe-mobile{
+        display: block;
+    }
+}
+:host{
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    ul{
+        width: 100%;
+        padding: 0;
+        li{
+            width: 100%;
+            &::marker{
+                content: none;
+            }
+        }
+    }
+}

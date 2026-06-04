@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as v;
+.accordeon {
+    width: 70%;
+    border-bottom: 1px solid black;
+    padding-bottom: 2rem;
+    margin: auto;
+    summary{
+        cursor: pointer;
+    }
+    h3{
+        display: inline-block;
+    }
+    .last-p,
+    p:last-child{
+        margin-bottom: 2rem;
+    }
+    ul{
+        padding-left: 1rem;
+    }
+    li::marker{
+        content: normal !important;
+    }
+}
+
+@media screen and (max-width: v.$breakpoint-telephone) {
+    .accordeon{
+        width: 90% !important;
+    }
+}

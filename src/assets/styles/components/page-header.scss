@@ -1,0 +1,22 @@
+@use "../../styles/abstracts/variables" as v;
+.page-header{
+    background-image: url("../../images/accueil-desktop.webp");
+    height: 45rem;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom bottom;
+    background-size: cover;
+    &::before{
+        content: "";
+        background-color: v.$dark-violet;
+        display: block;
+        height: 100%;
+        width: auto;
+        opacity: 50%;
+    }
+}
+@media screen and (max-width: v.$breakpoint-tablette){
+    .page-header{
+        background-image: url("../../images/accueil-mobile.webp");
+    }
+}

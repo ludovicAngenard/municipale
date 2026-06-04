@@ -1,0 +1,12 @@
+@use "../../../assets/styles/components/nav-link.scss";
+:host{
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+        li::marker{
+            content: none;
+        }
+    }
+}

@@ -1,0 +1,133 @@
+<nav
+  class="topnav"
+  id="myTopnav"
+  [class]="menuDisplayedClass()"
+  role="navigation"
+>
+  <div>
+    <button
+      aria-label="tous les sites"
+      aria-expanded="false"
+      aria-controls="entete-tous-les-sites"
+      class="button-icon"
+      (click)="toggleDialog()"
+    >
+      <i aria-hidden="false" class="fa-solid fa-grip"></i>
+  </button>
+    <a
+      class="logo"
+      href="#"
+      title="Accueil"
+    >
+      <img
+        src="/assets/images/angers-populaire-typo-noire-180.webp"
+        aria-hidden="true"
+        alt="Angers populaire 2026 - Arash Saeidi"
+      >
+    </a>
+    <a
+      class="responsive-menu-button"
+      href="javascript:void(0);"
+      [title]="isMenuDisplayed() ? 'fermer menu':'ouvrir menu'"
+      (click)="onClickMobileMenu()"
+      [class]="menuDisplayedClass()"
+    >
+      @if(isMenuDisplayed()){
+        <i aria-hidden="true" class="fa-solid fa-xmark"></i>
+      } @else {
+        <i aria-hidden="true" class="fa fa-bars"></i>
+      }
+    </a>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a routerLink="/programme" [routerLinkActive]="['active']" class="nav-link">
+          Municipales 2026 - Le programme
+        </a>
+      </li>
+      <li>
+        <a routerLink="/departement" [routerLinkActive]="['active']" class="nav-link">
+          Le département
+        </a>
+      </li>
+      <li>
+        <a  routerLink='/contacter' [routerLinkActive]="['active']" class="nav-link">
+           Nous contacter
+        </a>
+      </li>
+      <li>
+        <a href="https://actionpopulaire.fr/" [routerLinkActive]="['active']" class="link-action-populaire">
+          <img src="/assets/images/action-populaire.webp" alt="" width="30">
+          Action populaire
+        </a>
+      </li>
+      <li>
+        <a href="https://actionpopulaire.fr/financer/" class="button-light">
+          FAIRE UN DON
+        </a>
+      </li>
+    </ul>
+</nav>
+
+<dialog id="entete-tous-les-sites">
+  Tous les sites
+  <button
+    aria-label="fermer"
+    (click)="toggleDialog()"
+  >
+    <i aria-hidden="true" class="fa-solid fa-xmark"></i>
+  </button>
+  <hr/>
+  <div>
+    <a
+      href="https://melenchon2027.fr"
+      aria-label="Mélenchon 2027"
+      title="Mélenchon 2027"
+      target="_blank"
+      class="link"
+      >
+      <img alt src="../../assets/images/FaviconVignette_carre.png">
+      Mélenchon 2027
+    </a>
+    <a
+      href="https://linsoumission.fr/"
+      aria-label="L'insoumission"
+      title="L'insoumission"
+      target="_blank"
+      class="link"
+      >
+      <img alt src="../../assets/images/LOGO-LINSOU-150x150.png">
+      L'insoumission
+    </a>
+    <a
+      href="https://actionpopulaire.fr/"
+      aria-label="Action Populaire"
+      title="Action Populaire"
+      target="_blank"
+      class="link"
+    >
+      <img alt src="../../assets/images/Logo-AP-Icone.png">
+      Action populaire
+    </a>
+    <a
+      href="https://institutlaboetie.fr/"
+      aria-label="Institut laa boétie"
+      title="Institut la boétie"
+      target="_blank"
+      class="link"
+    >
+      <img alt src="../../assets/images/institu-la-boétie-logo-icone.png">
+      Institut la Boétie
+    </a>
+    <a
+      href="https://lafranceinsoumise.fr"
+      aria-label="La france insoumise"
+      title="La france insoumise"
+      target="_blank"
+      class="link"
+    >
+      <img alt src="../../assets/images/lfi-vertical.png">
+      La france insoumise
+    </a>
+  </div>
+</dialog>
