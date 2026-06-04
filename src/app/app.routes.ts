@@ -4,32 +4,32 @@ const routeConfig: Routes = [
     {
         path: '',
         loadComponent: () => import('./features/accueil/accueil').then(m => m.Accueil),
-        title: 'Angers populaire - élections municipales le 15 et 22 mars 2026 - France insoumise',
+        title: 'Angers populaire - France insoumise Angers 49',
     },
     {
         path: 'mentions-legales',
         loadComponent: () => import('./features/mention-legales/mention-legales').then(m => m.MentionLegales),
-        title: 'Mentions légales - élections municipales le 15 et 22 mars 2026 - Angers populaire - France insoumise',
+        title: 'France insoumise Angers 49 - Mentions légales',
     },
     {
         path: 'contacter',
         loadComponent: () => import('./features/contacter/contacter').then(m => m.Contacter),
-        title: 'Mentions légales - élections municipales le 15 et 22 mars 2026 - Angers populaire - France insoumise',
+        title: 'France insoumise Angers 49 - Nous contacter',
     },
     {
         path: 'programme',
         loadComponent: () => import('./features/pogramme/pogramme').then(m => m.Pogramme),
-        title: 'Notre programme - élections municipales le 15 et 22 mars 2026 - Angers populaire - France insoumise',
+        title: 'France insoumise Angers 49 - programme des élections municipales 2026',
     },
     {
         path: 'departement',
         loadComponent: () => import('./features/departement/departement').then(m => m.Departement),
-        title: 'Notre programme - élections municipales le 15 et 22 mars 2026 - Angers populaire - France insoumise',
+        title: 'France insoumise Angers 49 - le département Maine-et-Loire 49',
     },
     {
         path: 'plan-du-site',
         loadComponent: () => import('./features/plan-du-site/plan-du-site').then(m => m.PlanDuSite),
-        title: 'Notre programme - élections municipales le 15 et 22 mars 2026 - Angers populaire - France insoumise',
+        title: 'France insoumise Angers 49 - Le plan du site',
     },
 ];
 export default routeConfig;
